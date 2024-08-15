@@ -107,5 +107,4 @@ class TodoListTest {
         Assertions.assertEquals("taskC taskB taskA", todoList.seeTasksDescending());
     }
 
-
 }
