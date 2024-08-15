@@ -28,4 +28,13 @@ class TodoListTest {
         todoList.add(taskTwo);
         Assertions.assertEquals("taskOne incomplete, taskTwo incomplete", todoList.seeTasks());
     }
+
+    @Test
+    public void testChangeStatus(){
+        Task taskOne = new Task("taskOne");
+        todoList.add(taskOne);
+        Assertions.assertTrue(todoList.changeStatus(taskOne, true));
+        Assertions.assertFalse(todoList.changeStatus(taskOne, false));
+        Assertions.assertFalse(todoList.changeStatus(taskOne, false));
+    }
 }
