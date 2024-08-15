@@ -3,6 +3,8 @@ package com.booleanuk.extension;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
+
 public class TodoListTestExtension {
     @Test
     public void exampleTest() {
@@ -126,5 +128,12 @@ public class TodoListTestExtension {
         Task taskA = new Task("taskA");
         todoList.add(taskA);
         Assertions.assertTrue(todoList.changeStatusById(taskA.getId()));
+    }
+
+    @Test
+    public void testSeeDates(){
+        Task taskA = new Task("taskA");
+        todoList.add(taskA);
+        Assertions.assertEquals(LocalDateTime.now(), todoList.seeDates());
     }
 }
