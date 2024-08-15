@@ -98,7 +98,16 @@ public class TodoList {
     }
 
     public String seeTasksAscending(){
-        return "";
+        String result = "";
+        tasks.sort((t1, t2) -> t1.getName().compareTo(t2.getName()));
+        for(Task task : tasks){
+            result += task.getName();
+
+            if(tasks.getLast() != task){
+                result += " ";
+            }
+        }
+        return result;
     }
 
 }
