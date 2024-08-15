@@ -139,8 +139,8 @@ public class TodoList {
     }
 
     public Boolean changeStatusById(String id){
-        //return changeStatus(getTaskById(id));
-        return null;
+        return changeStatus(getTaskById(id));
+        //return null;
     }
 
 }
