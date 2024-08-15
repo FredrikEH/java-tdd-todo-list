@@ -72,8 +72,20 @@ public class TodoList {
         return result;
     }
 
-    public String search(String task){
-        return "";
+    public String search(String searchedTask){
+        String result = "";
+        for(Task task : tasks){
+            if(task.getName().equals(searchedTask)){
+                result += task.getName();
+                if(task.getCompleted()){
+                    result += " completed";
+                }
+                else{
+                    result += " incomplete";
+                }
+            }
+        }
+        return result;
     }
 
 }
