@@ -31,12 +31,19 @@ public class TodoList {
         return result;
     }
 
-    /*
     public Boolean changeStatus(Task task){
-        //task.setCompleted(false);
+        /*if(!tasks.contains(task)){
+            throw new Exception("Task not found!");
+        }*/
+        if(task.getCompleted()){
+            task.setCompleted(false);
+        }
+        else{
+            task.setCompleted(true);
+        }
         return task.getCompleted();
     }
-    */
+
 
 
 }

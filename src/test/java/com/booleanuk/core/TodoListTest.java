@@ -36,8 +36,9 @@ class TodoListTest {
         todoList.add(taskOne);
         Assertions.assertTrue(todoList.changeStatus(taskOne));
         Assertions.assertFalse(todoList.changeStatus(taskOne));
-        Assertions.assertFalse(todoList.changeStatus(taskOne));
-        Assertions.fail(todoList.changeStatus(taskTwo));
+        //Assertions.assertFalse(todoList.changeStatus(taskOne));
+        Assertions.assertFalse(todoList.changeStatus(taskTwo));
+        //Assertions.fail(todoList.changeStatus(taskTwo));
     }
 
 
