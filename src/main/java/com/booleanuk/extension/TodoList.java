@@ -1,5 +1,6 @@
 package com.booleanuk.extension;
 
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public class TodoList {
@@ -144,7 +145,16 @@ public class TodoList {
     }
 
     public String seeDates(){
-        return "";
+        String result = "";
+        for(Task task : tasks){
+            result += task.getName() + " " + task.getDate().truncatedTo(ChronoUnit.SECONDS).toString();
+
+            if(tasks.getLast() != task){
+                result += " ";
+            }
+        }
+        System.out.println(result);
+        return result;
     }
 
 }

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 public class TodoListTestExtension {
     @Test
@@ -133,7 +134,9 @@ public class TodoListTestExtension {
     @Test
     public void testSeeDates(){
         Task taskA = new Task("taskA");
+        Task taskB = new Task("taskB");
         todoList.add(taskA);
-        Assertions.assertEquals(LocalDateTime.now(), todoList.seeDates());
+        todoList.add(taskB);
+        Assertions.assertEquals("taskA " + LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS).toString() + " taskB " + LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS).toString(), todoList.seeDates());
     }
 }
