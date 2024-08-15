@@ -32,9 +32,13 @@ class TodoListTest {
     @Test
     public void testChangeStatus(){
         Task taskOne = new Task("taskOne");
+        Task taskTwo = new Task("taskTwo");
         todoList.add(taskOne);
-        Assertions.assertTrue(todoList.changeStatus(taskOne, true));
-        Assertions.assertFalse(todoList.changeStatus(taskOne, false));
-        Assertions.assertFalse(todoList.changeStatus(taskOne, false));
+        Assertions.assertTrue(todoList.changeStatus(taskOne));
+        Assertions.assertFalse(todoList.changeStatus(taskOne));
+        Assertions.assertFalse(todoList.changeStatus(taskOne));
+        Assertions.fail(todoList.changeStatus(taskTwo));
     }
+
+
 }
