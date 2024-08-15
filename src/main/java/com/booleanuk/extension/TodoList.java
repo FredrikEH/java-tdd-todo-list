@@ -138,4 +138,9 @@ public class TodoList {
         return task.getName();
     }
 
+    public Boolean changeStatusById(String id){
+        //return changeStatus(getTaskById(id));
+        return null;
+    }
+
 }

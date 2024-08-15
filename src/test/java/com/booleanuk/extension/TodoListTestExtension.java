@@ -120,4 +120,11 @@ public class TodoListTestExtension {
         todoList.add(taskA);
         Assertions.assertEquals("newName", todoList.setNameById(taskA.getId(), "newName"));
     }
+
+    @Test
+    public void testChangeStatusById(){
+        Task taskA = new Task("taskA");
+        todoList.add(taskA);
+        Assertions.assertTrue(todoList.changeStatusById(taskA.getId()));
+    }
 }
