@@ -62,7 +62,7 @@ public class TodoList {
     public String seeIncompleteTasks(){
         String result = "";
         for(Task task : tasks){
-            if(task.getCompleted()){
+            if(!task.getCompleted()){
                 result += task.getName();
                 if(tasks.getLast() != task){
                     result += ", ";
