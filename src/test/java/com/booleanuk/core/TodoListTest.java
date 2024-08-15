@@ -41,5 +41,16 @@ class TodoListTest {
         //Assertions.fail(todoList.changeStatus(taskTwo));
     }
 
-
+    @Test
+    public void testSeeCompletedTasks(){
+        Task taskOne = new Task("taskOne");
+        Task taskTwo = new Task("taskTwo");
+        Task taskThree = new Task("taskThree");
+        todoList.add(taskOne);
+        todoList.add(taskTwo);
+        todoList.add(taskThree);
+        todoList.changeStatus(taskOne);
+        todoList.changeStatus(taskThree);
+        Assertions.assertEquals("taskOne, taskThree", todoList.seeCompletedTasks());
+    }
 }
