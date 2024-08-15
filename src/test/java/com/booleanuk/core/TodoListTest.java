@@ -24,6 +24,8 @@ class TodoListTest {
     public void testSeeTasks(){
         Task taskOne = new Task("taskOne");
         Task taskTwo = new Task("taskTwo");
+        todoList.add(taskOne);
+        todoList.add(taskTwo);
         Assertions.assertEquals("taskOne incomplete, taskTwo incomplete", todoList.seeTasks());
     }
 }
