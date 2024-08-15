@@ -31,4 +31,9 @@ public class TodoList {
         return result;
     }
 
+    public Boolean changeStatus(Task task, Boolean bool){
+        task.setCompleted(bool);
+        return task.getCompleted();
+    }
+
 }

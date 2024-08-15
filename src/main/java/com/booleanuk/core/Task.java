@@ -12,4 +12,5 @@ public class Task {
 
     public String getName(){return name;}
     public Boolean getCompleted(){return completed;}
+    public void setCompleted(Boolean bool){completed = bool;}
 }
