@@ -75,5 +75,15 @@ class TodoListTest {
         Assertions.assertEquals("Task not found", todoList.search("taskTwo"));
     }
 
+    @Test
+    public void testRemove(){
+        Task taskOne = new Task("taskOne");
+        Assertions.assertEquals("Task not found", todoList.remove(taskOne));
+        todoList.add(taskOne);
+        Assertions.assertTrue(todoList.tasks.contains(taskOne));
+        Assertions.assertEquals("taskOne removed", todoList.remove(taskOne));
+        Assertions.assertFalse(todoList.tasks.contains(taskOne));
+    }
+
 
 }
