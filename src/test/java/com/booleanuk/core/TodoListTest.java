@@ -72,5 +72,8 @@ class TodoListTest {
         Task taskOne = new Task("taskOne");
         todoList.add(taskOne);
         Assertions.assertEquals("taskOne incomplete", todoList.search("taskOne"));
+        Assertions.assertEquals("Task not found", todoList.search("taskTwo"));
     }
+
+
 }
