@@ -96,5 +96,16 @@ class TodoListTest {
         Assertions.assertEquals("taskA taskB taskC", todoList.seeTasksAscending());
     }
 
+    @Test
+    public void testSeeTasksDescending(){
+        Task taskA = new Task("taskA");
+        Task taskB = new Task("taskB");
+        Task taskC = new Task("taskC");
+        todoList.add(taskC);
+        todoList.add(taskA);
+        todoList.add(taskB);
+        Assertions.assertEquals("taskC taskB taskA", todoList.seeTasksDescending());
+    }
+
 
 }
