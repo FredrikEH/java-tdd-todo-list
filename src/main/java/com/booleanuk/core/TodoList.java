@@ -112,14 +112,14 @@ public class TodoList {
 
     public String seeTasksDescending(){
         String result = "";
-        /*tasks.sort((t2, t1) -> t2.getName().compareTo(t1.getName()));
-        for(Task task : tasks){
-            result += task.getName();
+        tasks.sort((t2, t1) -> t2.getName().compareTo(t1.getName()));
+        for(int i = tasks.size()-1; i > -1; --i){
+            result += tasks.get(i).getName();
 
-            if(tasks.getLast() != task){
+            if(tasks.getFirst() != tasks.get(i)){
                 result += " ";
             }
-        }*/
+        }
         return result;
     }
 
