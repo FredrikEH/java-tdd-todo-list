@@ -124,7 +124,12 @@ public class TodoList {
     }
 
     public Task getTaskById(String id){
-        return tasks.get(0);
+        for(Task task : tasks){
+            if(task.getId().equals(id)){
+                return task;
+            }
+        }
+        return null;
     }
 
 }

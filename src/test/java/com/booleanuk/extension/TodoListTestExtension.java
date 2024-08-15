@@ -111,6 +111,6 @@ public class TodoListTestExtension {
     public void testGetTaskById(){
         Task taskA = new Task("taskA");
         todoList.add(taskA);
-        Assertions.assertEquals("taskA", todoList.getTaskById(taskA.getId()));
+        Assertions.assertEquals(taskA, todoList.getTaskById(taskA.getId()));
     }
 }
