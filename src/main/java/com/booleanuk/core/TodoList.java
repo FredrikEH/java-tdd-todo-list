@@ -46,6 +46,17 @@ public class TodoList {
         return task.getCompleted();
     }
 
-
+    public String seeCompletedTasks(){
+        String result = "";
+        for(Task task : tasks){
+            if(task.getCompleted()){
+                result += task.getName();
+                if(tasks.getLast() != task){
+                    result += ", ";
+                }
+            }
+        }
+        return result;
+    }
 
 }
