@@ -20,9 +20,9 @@ public class Task {
     }
 
     public String getName(){return this.name;}
+    public void setName(String newName){this.name = newName;}
     public Boolean getCompleted(){return this.completed;}
     public void setCompleted(Boolean bool){this.completed = bool;}
     public String getId(){return this.id;}
-    public void setId(String newId){this.id = newId;}
 
 }

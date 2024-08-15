@@ -133,7 +133,9 @@ public class TodoList {
     }
 
     public String setNameById(String id, String newName){
-        return "";
+        Task task = getTaskById(id);
+        task.setName(newName);
+        return task.getName();
     }
 
 }
