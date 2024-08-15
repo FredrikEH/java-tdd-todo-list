@@ -12,7 +12,6 @@ public class TodoList {
         return result;
     }
 
-    /*
     public String seeTasks(){
         String result = "";
         for(Task task : tasks){
@@ -31,6 +30,5 @@ public class TodoList {
         }
         return result;
     }
-    */
 
 }
