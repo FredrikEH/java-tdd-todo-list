@@ -90,7 +90,11 @@ public class TodoList {
     }
 
     public String remove(Task task){
-        return "";
+        if(tasks.contains(task)){
+            tasks.remove(task);
+            return task.getName() + " removed";
+        }
+        return "Task not found";
     }
 
 }
