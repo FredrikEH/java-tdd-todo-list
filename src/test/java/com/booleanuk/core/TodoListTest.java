@@ -17,6 +17,13 @@ class TodoListTest {
     public void testAdd(){
         Task taskOne = new Task("taskOne");
         Assertions.assertEquals("taskOne added.", todoList.add(taskOne));
-        //Assertions.assertTrue(todoList.tasks.contains("taskOne"));
+        Assertions.assertTrue(todoList.tasks.contains(taskOne));
+    }
+
+    @Test
+    public void testSeeTasks(){
+        Task taskOne = new Task("taskOne");
+        Task taskTwo = new Task("taskTwo");
+        Assertions.assertEquals("taskOne incomplete, taskTwo incomplete", todoList.seeTasks());
     }
 }
