@@ -55,7 +55,7 @@ class TodoListTest {
     }
 
     @Test
-    public void testTasksIncomplete(){
+    public void testSeeTasksIncomplete(){
         Task taskOne = new Task("taskOne");
         Task taskTwo = new Task("taskTwo");
         Task taskThree = new Task("taskThree");
@@ -65,5 +65,12 @@ class TodoListTest {
         todoList.changeStatus(taskOne);
         todoList.changeStatus(taskThree);
         Assertions.assertEquals("taskTwo, ", todoList.seeIncompleteTasks());
+    }
+
+    @Test
+    public void testSearch(){
+        Task taskOne = new Task("taskOne");
+        todoList.add(taskOne);
+        Assertions.assertEquals("taskOne incomplete", todoList.search("taskOne"));
     }
 }
