@@ -83,9 +83,10 @@ public class TodoList {
                 else{
                     result += " incomplete";
                 }
+                return result;
             }
         }
-        return result;
+        return "Task not found";
     }
 
 }
