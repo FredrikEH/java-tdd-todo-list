@@ -137,6 +137,7 @@ public class TodoListTestExtension {
         Task taskB = new Task("taskB");
         todoList.add(taskA);
         todoList.add(taskB);
-        Assertions.assertEquals("taskA " + LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS).toString() + " taskB " + LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS).toString(), todoList.seeDates());
+        Assertions.assertEquals("taskA " + LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS).toString() +
+                " taskB " + LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS).toString(), todoList.seeDates());
     }
 }
